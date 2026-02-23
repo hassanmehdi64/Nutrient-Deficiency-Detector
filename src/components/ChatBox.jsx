@@ -23,7 +23,7 @@ const ChatBox = ({ messages, onSend, loading, loadingSeconds = 0 }) => {
           <div
             key={`${message.role}-${index}`}
             className={`flex w-full items-start gap-3 ${
-              message.role === 'user' ? 'justify-end' : 'justify-start'
+              message.role === 'user' ? 'justify-end flex-row-reverse' : 'justify-start'
             }`}
           >
             <div
@@ -31,11 +31,11 @@ const ChatBox = ({ messages, onSend, loading, loadingSeconds = 0 }) => {
                 message.role === 'user' ? 'bg-green-500 text-white flex' : 'bg-green-700 text-white'
               }`}
             >
-              {message.role === 'user' ? <FiUser size={15} /> : <RiRobot2Line size={15} />}
+              {message.role === 'user' ? <FiUser size={15}/> : <RiRobot2Line size={15} />}
             </div>
             <div
               className={`w-fit max-w-[85%] whitespace-pre-line break-words rounded-lg px-3 py-2 text-sm text-slate-800 shadow-sm ${
-                message.role === 'user' ? 'bg-slate-200 text-right' : 'bg-white text-left'
+                message.role === 'user' ? 'ml-auto bg-slate-200 text-right' : 'bg-white text-left'
               }`}
             >
               {message.text}
