@@ -5,7 +5,7 @@ const defaultLinks = [
   { label: 'AgriBot', href: '#agribot' }
 ]
 
-const NavLinkSlider = ({ links = defaultLinks, className = '' }) => {
+const NavLinkSlider = ({ links = defaultLinks, className = '', compact = false }) => {
   const [activeIndex, setActiveIndex] = useState(0)
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const NavLinkSlider = ({ links = defaultLinks, className = '' }) => {
 
   return (
     <nav className={className}>
-      <div className="flex items-center gap-3">
+      <div className={`flex items-center ${compact ? 'gap-1.5' : 'gap-3'}`}>
         {links.map((link, index) => {
           const isActive = index === activeIndex
           return (
@@ -30,7 +30,9 @@ const NavLinkSlider = ({ links = defaultLinks, className = '' }) => {
               key={link.href}
               href={link.href}
               onClick={() => setActiveIndex(index)}
-              className={`rounded-md border px-4 py-1.5 text-center text-sm font-medium transition-colors ${
+              className={`rounded-md border text-center font-medium transition-colors ${
+                compact ? 'px-2.5 py-1 text-sm' : 'px-4 py-1.5 text-sm'
+              } ${
                 isActive
                   ? 'border-emerald-500 bg-emerald-50 text-emerald-700'
                   : 'border-transparent text-slate-600 hover:border-slate-300 hover:text-slate-900'

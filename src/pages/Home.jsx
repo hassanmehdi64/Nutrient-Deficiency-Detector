@@ -37,8 +37,10 @@ const Home = ({
         <section id="image-analysis" className="pt-4 pb-4 md:pt-6 md:pb-6">
           <div className="mx-auto max-w-6xl px-4">
             <div className="mb-6">
-              <h2 className="text-2xl font-bold">Image Analysis</h2>
-              <p className="mt-1 text-sm text-slate-600">Upload a rice crop leaf image for deficiency detection.</p>
+              <h2 className="text-2xl font-extrabold tracking-tight text-emerald-700 md:text-3xl">
+                Image Analysis
+              </h2>
+              <p className="mt-1 text-sm md:text-lg text-slate-600">Upload a rice crop leaf image for deficiency detection.</p>
             </div>
 
             {/* ==========Upload error alert ==============*/}
@@ -82,7 +84,7 @@ const Home = ({
         <section id="agribot" className="pt-4 pb-10 md:pt-6 md:pb-16">
           <div className="mx-auto max-w-6xl px-4">
             <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-              <h2 className="mb-4 text-2xl font-bold">AgriBot</h2>
+              <h2 className="mb-4 text-2xl font-bold md:text-3xl">AgriBot</h2>
               <ChatBox messages={messages} onSend={onSend} loading={chatLoading} loadingSeconds={chatSeconds} />
             </div>
           </div>

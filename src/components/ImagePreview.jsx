@@ -19,7 +19,7 @@ const ImagePreview = ({ previewUrl, onRemove, className = 'mt-6' }) => {
 
       {/* =================Preview image================ */}
       <div className="flex flex-1 items-center justify-center">
-        <div className="mx-1 flex h-80 w-full items-center justify-center overflow-hidden rounded-lg bg-white p-2">
+        <div className="mx-1 flex h-64 w-full items-center justify-center overflow-hidden rounded-lg bg-white p-2 sm:h-80">
           <img
             src={previewUrl}
             alt="Selected crop"

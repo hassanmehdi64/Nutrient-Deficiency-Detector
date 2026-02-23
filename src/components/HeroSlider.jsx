@@ -25,7 +25,7 @@ const HeroSlider = () => {
   }, [slides.length])
 
   return (
-    <div className="relative h-[300px] overflow-hidden rounded-2xl p-8 text-white shadow-lg">
+    <div className="relative h-[260px] overflow-hidden rounded-2xl p-6 text-white shadow-lg sm:h-[300px] sm:p-8">
       {/* ============Animated image slider background============== */}
       {slides.map((slide, index) => (
         <div
